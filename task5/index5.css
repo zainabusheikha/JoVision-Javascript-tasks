@@ -1,0 +1,32 @@
+<style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+     
+    
+
+      button {
+        background: #0e0b22;
+        color: #FF0000;
+        padding: 0.6rem;
+        margin-top: 20px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background: #1e1d25;
+      }
+</style>
