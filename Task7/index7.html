@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset = "UTF-8" >
+<title> Task 7 </title>
+</head>
+<body>
+
+<h1> the current time in the format "HH:MM:SS" </h1>
+<p id="demo"></p>
+
+<script>
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const date = new Date();
+  document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
