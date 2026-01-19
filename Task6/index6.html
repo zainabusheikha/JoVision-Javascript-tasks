@@ -1,0 +1,94 @@
+<html lang = "en" >
+<head>
+<meta charset = "UTF-8" >
+<title> Task 6 </title>
+</head>
+<body >
+<p id="output"></p>
+<button onclick = "ButtonOne()"> Remove numbers divisible by 3 </button>
+<button onclick = "ButtonTwo()"> Adds the numbers from 100 to 150 to the array </button>
+<button onclick = "ButtonThree()"> Adds 3 to each array member </button>
+<button onclick = "ButtonFour()"> prints the members from index 20 to 40 </button>
+<button onclick = "ButtonFive()"> Shuffle the members </button>
+<script >
+
+function ButtonOne()
+{
+let number = [] ;
+for(let i = 0 ; i <=100 ; i++ )
+{
+number.push(i);
+}
+let result = number.filter(function(value){
+return value%3 !== 0 ;
+});
+console.log(result);
+document.getElementById("output").innerHTML = "First button " +result ;
+}
+////////////////
+function ButtonTwo()
+{
+let number = [] ;
+for(let i = 0 ; i <=100 ; i++ )
+{
+number.push(i);
+}
+for(let i = 101 ; i<=150 ; i++ )
+{
+number.push(i);
+}
+console.log(number);
+document.getElementById("output").innerHTML = "Second button " +number ;
+}
+///////////////
+function ButtonThree()
+{
+let number = [] ;
+for(let i = 0 ; i <=100 ; i++ )
+{
+number.push(i);
+}
+let result = number.map(function(value){
+return value + 3 ; 
+} );
+console.log(result);
+document.getElementById("output").innerHTML = "Third button " +result;
+}
+//////////////////
+function ButtonFour()
+{
+let number = [] ;
+for(let i = 0 ; i <=100 ; i++)
+{
+number.push(i);
+}
+let result = number.slice(20,41);
+console.log(result);
+document.getElementById("output").innerHTML = "Fourth button " +result;
+}
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+           let temp = array[i];
+		   array[i] =  array[j];
+		    array[j] = temp;
+        }}
+function ButtonFive()
+{
+let number = [] ;
+for(let i = 0 ; i <=100 ; i++)
+{
+number.push(i);
+}
+ 
+shuffleArray(number);
+console.log("Shuffled:", number);
+number.sort(function(a,b){
+return b - a ;
+});
+console.log("Sorted Descending:", number);
+document.getElementById("output").innerHTML = "Five button(Sorted Descending) " +number ;
+}
+</script>
+</body>
+</html>
