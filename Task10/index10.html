@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta charset = "UTF-8" >
+<title> Task 10 </title>
+</head>
+<body>
+<h2> request to "https://api.ipify.org/" and replace the text of the button to the API's result</h2>
+<button onclick = "Gitip(this)"> Git ip </button>
+<script >
+function Gitip(button){
+fetch('https://api.ipify.org/')
+.then(response => response.text())
+.then ( ip => { 
+button.innerHTML = ip;
+})
+}
+</script>
+</body>
+</html>
