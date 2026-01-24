@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> Task 11 </title>
+</head>
+<body>
+<h1>JavaScript Errors</h1>
+<h2>JavaScript try catch</h2>
+<button onclick = "Getip(this)">Get ip</button>
+<script>
+
+ function Getip(button){
+
+fetch('https://api.ipify.orgx/')
+.then(response => response.text() )
+.then (ip => { button.innerHTML = ip ; } )
+.catch(error => {window.alert(error);
+});
+}
+</script>
+</body>
+</html>
