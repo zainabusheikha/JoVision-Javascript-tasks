@@ -1,0 +1,29 @@
+<html>
+<head>
+<title> Task 12 </title>
+</head>
+<body>
+<p id="demo"></p>
+<button onclick = "obj()"> Submit </button>
+<input type="text" id = "name" placeholder = "Name " title = "Name"><br><br>
+<input type = "number" id ="age" placeholder ="Age" title = "Age" ><br><br>
+<script>
+
+
+function obj(){
+var name = document.getElementById("name").value ;
+var age = document.getElementById("age").value ;
+var time = new Date().toLocaleString();
+const person = { name: name, age: age  , timestamp: time };
+
+
+const {name : n,age : a,timestamp : t} = person ;
+
+window.alert("\nYour name is: "+ n + "\nYour age is: " +a + "\n Time of submission: " + t );
+
+
+}
+</script> 
+
+</body>
+</html>
